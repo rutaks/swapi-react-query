@@ -1,7 +1,7 @@
 import { API_BASE_URL } from "../utils/constants";
 
-export const fetchPlanets = async () => {
-  const res = await fetch(`${API_BASE_URL}/planets`);
+export const fetchPlanets = async (_, page) => {
+  const res = await fetch(`${API_BASE_URL}/planets?page=${page}`);
   return res.json();
 };
 
